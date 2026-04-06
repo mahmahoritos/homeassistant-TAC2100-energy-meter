@@ -8,5 +8,5 @@
   "iot_class": "local_polling",
   "issue_tracker": "https://github.com/mahmahoritos/homeassistant-TAC2100-energy-meter/issues",
   "requirements": ["pymodbus>=3.6.0,<4.0.0", "pyserial>=3.5"],
-  "version": "0.1.0-alpha.2"
+  "version": "0.1.0-alpha.3"
 }

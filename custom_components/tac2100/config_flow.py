@@ -85,11 +85,12 @@ def _rtu_schema() -> vol.Schema:
                     translation_key="parity",
                 )
             ),
-            vol.Required(CONF_STOPBITS, default=DEFAULT_STOPBITS): SelectSelector(
+            # SelectSelector option values must be strings (HA core selector schema).
+            vol.Required(CONF_STOPBITS, default=str(DEFAULT_STOPBITS)): SelectSelector(
                 SelectSelectorConfig(
                     options=[
-                        SelectOptionDict(value=1, label="1"),
-                        SelectOptionDict(value=2, label="2"),
+                        SelectOptionDict(value="1", label="1"),
+                        SelectOptionDict(value="2", label="2"),
                     ],
                     translation_key="stopbits",
                 )
@@ -154,6 +155,8 @@ class Tac2100ConfigFlow(ConfigFlow, domain=DOMAIN):
         """Select Modbus connection type."""
         if user_input is not None:
             self._connection_type = user_input[CONF_CONNECTION_TYPE]
+            # Persist for flow reloads (same key as config entry field).
+            self.context[CONF_CONNECTION_TYPE] = self._connection_type
             return await self.async_step_connection()
         return self.async_show_form(step_id="user", data_schema=STEP_USER_SCHEMA)
 
@@ -161,7 +164,10 @@ class Tac2100ConfigFlow(ConfigFlow, domain=DOMAIN):
         self, user_input: dict[str, Any] | None = None
     ) -> ConfigFlowResult:
         """Enter TCP or RTU parameters."""
-        assert self._connection_type is not None
+        if self._connection_type is None:
+            self._connection_type = self.context.get(CONF_CONNECTION_TYPE)
+        if self._connection_type is None:
+            return await self.async_step_user()
         schema = _tcp_schema() if self._connection_type == CONNECTION_TCP else _rtu_schema()
         errors: dict[str, str] = {}
 
