@@ -1,6 +1,6 @@
 # TAC2100 Energy Meter (Home Assistant)
 
-**Status: alpha** (`0.1.0-alpha.4`) — for testing; breaking changes are possible before a stable release.
+**Status: alpha** (`0.1.0-alpha.5`) — for testing; breaking changes are possible before a stable release.
 
 Custom integration for the **Wenzhou Taiye TAC2100** series power meter using **Modbus** input registers (function `0x04`, IEEE-754 floats) per the manufacturer protocol.
 
@@ -11,7 +11,7 @@ Custom integration for the **Wenzhou Taiye TAC2100** series power meter using **
 - Measurements: voltage, current, powers, power factor, frequency, demands, and energy totals
 - **Energy dashboard**: import/export **active energy** sensors use `device_class: energy`, `state_class: total_increasing`, and **kWh** as required by the [Home Assistant energy FAQ](https://www.home-assistant.io/docs/energy/faq/#troubleshooting-missing-entities)
 - Configurable **kWh offsets** for import and export active energy
-- **English** and **Russian** UI strings (Russian entity names/units where applicable)
+- **English** and **Russian** UI strings for entity names; units follow `native_unit_of_measurement` (HA forbids duplicating units in translations)
 
 ## Installation
 

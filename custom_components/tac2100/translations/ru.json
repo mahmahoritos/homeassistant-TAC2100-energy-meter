@@ -61,110 +61,85 @@
   "entity": {
     "sensor": {
       "voltage": {
-        "name": "Напряжение",
-        "unit_of_measurement": "В"
+        "name": "Напряжение"
       },
       "current": {
-        "name": "Ток",
-        "unit_of_measurement": "А"
+        "name": "Ток"
       },
       "active_power": {
-        "name": "Активная мощность",
-        "unit_of_measurement": "Вт"
+        "name": "Активная мощность"
       },
       "reactive_power": {
-        "name": "Реактивная мощность",
-        "unit_of_measurement": "ВАр"
+        "name": "Реактивная мощность"
       },
       "apparent_power": {
-        "name": "Полная мощность",
-        "unit_of_measurement": "ВА"
+        "name": "Полная мощность"
       },
       "power_factor": {
         "name": "Коэффициент мощности"
       },
       "phase_angle": {
-        "name": "Угол фазового сдвига",
-        "unit_of_measurement": "°"
+        "name": "Угол фазового сдвига"
       },
       "frequency": {
-        "name": "Частота",
-        "unit_of_measurement": "Гц"
+        "name": "Частота"
       },
       "load_nature": {
         "name": "Характер нагрузки"
       },
       "active_power_demand": {
-        "name": "Потребляемая активная мощность (спрос)",
-        "unit_of_measurement": "Вт"
+        "name": "Потребляемая активная мощность (спрос)"
       },
       "reactive_power_demand": {
-        "name": "Реактивная мощность (спрос)",
-        "unit_of_measurement": "ВАр"
+        "name": "Реактивная мощность (спрос)"
       },
       "apparent_power_demand": {
-        "name": "Полная мощность (спрос)",
-        "unit_of_measurement": "ВА"
+        "name": "Полная мощность (спрос)"
       },
       "current_demand": {
-        "name": "Ток (спрос)",
-        "unit_of_measurement": "А"
+        "name": "Ток (спрос)"
       },
       "import_active_power_demand": {
-        "name": "Спрос активной мощности (импорт)",
-        "unit_of_measurement": "Вт"
+        "name": "Спрос активной мощности (импорт)"
       },
       "export_active_power_demand": {
-        "name": "Спрос активной мощности (экспорт)",
-        "unit_of_measurement": "Вт"
+        "name": "Спрос активной мощности (экспорт)"
       },
       "max_active_power_demand": {
-        "name": "Максимальный спрос активной мощности",
-        "unit_of_measurement": "Вт"
+        "name": "Максимальный спрос активной мощности"
       },
       "max_reactive_power_demand": {
-        "name": "Максимальный спрос реактивной мощности",
-        "unit_of_measurement": "ВАр"
+        "name": "Максимальный спрос реактивной мощности"
       },
       "max_apparent_power_demand": {
-        "name": "Максимальный спрос полной мощности",
-        "unit_of_measurement": "ВА"
+        "name": "Максимальный спрос полной мощности"
       },
       "max_current_demand": {
-        "name": "Максимальный спрос тока",
-        "unit_of_measurement": "А"
+        "name": "Максимальный спрос тока"
       },
       "max_import_active_power_demand": {
-        "name": "Макс. спрос активной мощности (импорт)",
-        "unit_of_measurement": "Вт"
+        "name": "Макс. спрос активной мощности (импорт)"
       },
       "max_export_active_power_demand": {
-        "name": "Макс. спрос активной мощности (экспорт)",
-        "unit_of_measurement": "Вт"
+        "name": "Макс. спрос активной мощности (экспорт)"
       },
       "total_import_active_energy": {
-        "name": "Суммарная импортируемая активная энергия",
-        "unit_of_measurement": "кВт·ч"
+        "name": "Суммарная импортируемая активная энергия"
       },
       "total_export_active_energy": {
-        "name": "Суммарная экспортируемая активная энергия",
-        "unit_of_measurement": "кВт·ч"
+        "name": "Суммарная экспортируемая активная энергия"
       },
       "total_active_energy": {
-        "name": "Суммарная активная энергия",
-        "unit_of_measurement": "кВт·ч"
+        "name": "Суммарная активная энергия"
       },
       "total_import_reactive_energy": {
-        "name": "Суммарная импортируемая реактивная энергия",
-        "unit_of_measurement": "квар·ч"
+        "name": "Суммарная импортируемая реактивная энергия"
       },
       "total_export_reactive_energy": {
-        "name": "Суммарная экспортируемая реактивная энергия",
-        "unit_of_measurement": "квар·ч"
+        "name": "Суммарная экспортируемая реактивная энергия"
       },
       "total_reactive_energy": {
-        "name": "Суммарная реактивная энергия",
-        "unit_of_measurement": "квар·ч"
+        "name": "Суммарная реактивная энергия"
       }
     }
   },

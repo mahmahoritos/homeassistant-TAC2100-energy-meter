@@ -61,110 +61,85 @@
   "entity": {
     "sensor": {
       "voltage": {
-        "name": "Voltage",
-        "unit_of_measurement": "V"
+        "name": "Voltage"
       },
       "current": {
-        "name": "Current",
-        "unit_of_measurement": "A"
+        "name": "Current"
       },
       "active_power": {
-        "name": "Active power",
-        "unit_of_measurement": "W"
+        "name": "Active power"
       },
       "reactive_power": {
-        "name": "Reactive power",
-        "unit_of_measurement": "var"
+        "name": "Reactive power"
       },
       "apparent_power": {
-        "name": "Apparent power",
-        "unit_of_measurement": "VA"
+        "name": "Apparent power"
       },
       "power_factor": {
         "name": "Power factor"
       },
       "phase_angle": {
-        "name": "Phase angle",
-        "unit_of_measurement": "°"
+        "name": "Phase angle"
       },
       "frequency": {
-        "name": "Frequency",
-        "unit_of_measurement": "Hz"
+        "name": "Frequency"
       },
       "load_nature": {
         "name": "Load type"
       },
       "active_power_demand": {
-        "name": "Active power demand",
-        "unit_of_measurement": "W"
+        "name": "Active power demand"
       },
       "reactive_power_demand": {
-        "name": "Reactive power demand",
-        "unit_of_measurement": "var"
+        "name": "Reactive power demand"
       },
       "apparent_power_demand": {
-        "name": "Apparent power demand",
-        "unit_of_measurement": "VA"
+        "name": "Apparent power demand"
       },
       "current_demand": {
-        "name": "Current demand",
-        "unit_of_measurement": "A"
+        "name": "Current demand"
       },
       "import_active_power_demand": {
-        "name": "Import active power demand",
-        "unit_of_measurement": "W"
+        "name": "Import active power demand"
       },
       "export_active_power_demand": {
-        "name": "Export active power demand",
-        "unit_of_measurement": "W"
+        "name": "Export active power demand"
       },
       "max_active_power_demand": {
-        "name": "Maximum active power demand",
-        "unit_of_measurement": "W"
+        "name": "Maximum active power demand"
       },
       "max_reactive_power_demand": {
-        "name": "Maximum reactive power demand",
-        "unit_of_measurement": "var"
+        "name": "Maximum reactive power demand"
       },
       "max_apparent_power_demand": {
-        "name": "Maximum apparent power demand",
-        "unit_of_measurement": "VA"
+        "name": "Maximum apparent power demand"
       },
       "max_current_demand": {
-        "name": "Maximum current demand",
-        "unit_of_measurement": "A"
+        "name": "Maximum current demand"
       },
       "max_import_active_power_demand": {
-        "name": "Maximum import active power demand",
-        "unit_of_measurement": "W"
+        "name": "Maximum import active power demand"
       },
       "max_export_active_power_demand": {
-        "name": "Maximum export active power demand",
-        "unit_of_measurement": "W"
+        "name": "Maximum export active power demand"
       },
       "total_import_active_energy": {
-        "name": "Total import active energy",
-        "unit_of_measurement": "kWh"
+        "name": "Total import active energy"
       },
       "total_export_active_energy": {
-        "name": "Total export active energy",
-        "unit_of_measurement": "kWh"
+        "name": "Total export active energy"
       },
       "total_active_energy": {
-        "name": "Total active energy",
-        "unit_of_measurement": "kWh"
+        "name": "Total active energy"
       },
       "total_import_reactive_energy": {
-        "name": "Total import reactive energy",
-        "unit_of_measurement": "kvarh"
+        "name": "Total import reactive energy"
       },
       "total_export_reactive_energy": {
-        "name": "Total export reactive energy",
-        "unit_of_measurement": "kvarh"
+        "name": "Total export reactive energy"
       },
       "total_reactive_energy": {
-        "name": "Total reactive energy",
-        "unit_of_measurement": "kvarh"
+        "name": "Total reactive energy"
       }
     }
   },
