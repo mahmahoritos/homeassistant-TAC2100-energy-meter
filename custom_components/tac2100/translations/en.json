@@ -1,0 +1,172 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Modbus connection",
+        "description": "Choose how Home Assistant connects to the TAC2100 meter.",
+        "data": {
+          "connection_type": "Transport"
+        }
+      },
+      "connection": {
+        "title": "Connection settings",
+        "description": "Enter the parameters for your adapter or gateway, including the Modbus unit ID (slave address) of the meter — the same for Modbus TCP and RTU.",
+        "data": {
+          "host": "Device IP address",
+          "port": "TCP port",
+          "serial_port": "Serial port",
+          "baudrate": "Baud rate",
+          "bytesize": "Data bits",
+          "parity": "Parity",
+          "stopbits": "Stop bits",
+          "slave": "Modbus unit ID (slave address, 1–247)"
+        }
+      },
+      "device": {
+        "title": "Meter",
+        "description": "Polling interval and optional offsets for active energy totals (kWh) read from the meter. Offsets are added to the raw counter values (e.g. to match your utility bill).",
+        "data": {
+          "scan_interval": "Polling interval (seconds)",
+          "import_energy_offset": "Import active energy offset (kWh)",
+          "export_energy_offset": "Export active energy offset (kWh)"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Could not connect to the Modbus device.",
+      "cannot_read": "Connected, but reading input registers failed (check unit ID, wiring, and protocol)."
+    }
+  },
+  "selector": {
+    "connection_type": {
+      "options": {
+        "tcp": "Modbus TCP",
+        "rtu": "Modbus RTU"
+      }
+    },
+    "parity": {
+      "options": {
+        "N": "None",
+        "E": "Even",
+        "O": "Odd"
+      }
+    },
+    "stopbits": {
+      "options": {
+        "1": "1",
+        "2": "2"
+      }
+    }
+  },
+  "entity": {
+    "sensor": {
+      "voltage": {
+        "name": "Voltage",
+        "unit_of_measurement": "V"
+      },
+      "current": {
+        "name": "Current",
+        "unit_of_measurement": "A"
+      },
+      "active_power": {
+        "name": "Active power",
+        "unit_of_measurement": "W"
+      },
+      "reactive_power": {
+        "name": "Reactive power",
+        "unit_of_measurement": "var"
+      },
+      "apparent_power": {
+        "name": "Apparent power",
+        "unit_of_measurement": "VA"
+      },
+      "power_factor": {
+        "name": "Power factor"
+      },
+      "phase_angle": {
+        "name": "Phase angle",
+        "unit_of_measurement": "°"
+      },
+      "frequency": {
+        "name": "Frequency",
+        "unit_of_measurement": "Hz"
+      },
+      "load_nature": {
+        "name": "Load type"
+      },
+      "active_power_demand": {
+        "name": "Active power demand",
+        "unit_of_measurement": "W"
+      },
+      "reactive_power_demand": {
+        "name": "Reactive power demand",
+        "unit_of_measurement": "var"
+      },
+      "apparent_power_demand": {
+        "name": "Apparent power demand",
+        "unit_of_measurement": "VA"
+      },
+      "current_demand": {
+        "name": "Current demand",
+        "unit_of_measurement": "A"
+      },
+      "import_active_power_demand": {
+        "name": "Import active power demand",
+        "unit_of_measurement": "W"
+      },
+      "export_active_power_demand": {
+        "name": "Export active power demand",
+        "unit_of_measurement": "W"
+      },
+      "max_active_power_demand": {
+        "name": "Maximum active power demand",
+        "unit_of_measurement": "W"
+      },
+      "max_reactive_power_demand": {
+        "name": "Maximum reactive power demand",
+        "unit_of_measurement": "var"
+      },
+      "max_apparent_power_demand": {
+        "name": "Maximum apparent power demand",
+        "unit_of_measurement": "VA"
+      },
+      "max_current_demand": {
+        "name": "Maximum current demand",
+        "unit_of_measurement": "A"
+      },
+      "max_import_active_power_demand": {
+        "name": "Maximum import active power demand",
+        "unit_of_measurement": "W"
+      },
+      "max_export_active_power_demand": {
+        "name": "Maximum export active power demand",
+        "unit_of_measurement": "W"
+      },
+      "total_import_active_energy": {
+        "name": "Total import active energy",
+        "unit_of_measurement": "kWh"
+      },
+      "total_export_active_energy": {
+        "name": "Total export active energy",
+        "unit_of_measurement": "kWh"
+      },
+      "total_active_energy": {
+        "name": "Total active energy",
+        "unit_of_measurement": "kWh"
+      },
+      "total_import_reactive_energy": {
+        "name": "Total import reactive energy",
+        "unit_of_measurement": "kvarh"
+      },
+      "total_export_reactive_energy": {
+        "name": "Total export reactive energy",
+        "unit_of_measurement": "kvarh"
+      },
+      "total_reactive_energy": {
+        "name": "Total reactive energy",
+        "unit_of_measurement": "kvarh"
+      }
+    }
+  },
+  "title": "TAC2100 Energy Meter"
+}

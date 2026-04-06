@@ -1,0 +1,16 @@
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+.venv/
+venv/
+.env
+.env.*
+.idea/
+.vscode/
+*.swp
+Thumbs.db
+.DS_Store
+
+# Vendor datasheet (add manually if redistribution is allowed)
+*.pdf

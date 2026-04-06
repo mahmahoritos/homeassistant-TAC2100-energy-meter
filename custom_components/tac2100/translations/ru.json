@@ -1,0 +1,172 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Подключение Modbus",
+        "description": "Выберите способ связи Home Assistant со счётчиком TAC2100.",
+        "data": {
+          "connection_type": "Транспорт"
+        }
+      },
+      "connection": {
+        "title": "Параметры соединения",
+        "description": "Укажите настройки адаптера или шлюза и адрес устройства Modbus (slave) счётчика — он задаётся и для Modbus TCP, и для Modbus RTU.",
+        "data": {
+          "host": "IP-адрес устройства",
+          "port": "Порт TCP",
+          "serial_port": "Последовательный порт",
+          "baudrate": "Скорость (бод)",
+          "bytesize": "Бит данных",
+          "parity": "Чётность",
+          "stopbits": "Стоп-биты",
+          "slave": "Адрес устройства Modbus (slave, 1–247)"
+        }
+      },
+      "device": {
+        "title": "Счётчик",
+        "description": "Период опроса и необязательные смещения для суммарной активной энергии (кВт·ч), считываемой со счётчика. Смещения прибавляются к показаниям (например, для совпадения с квитанцией).",
+        "data": {
+          "scan_interval": "Интервал опроса (сек)",
+          "import_energy_offset": "Смещение импортируемой активной энергии (кВт·ч)",
+          "export_energy_offset": "Смещение экспортируемой активной энергии (кВт·ч)"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Не удалось установить соединение с устройством Modbus.",
+      "cannot_read": "Соединение есть, но чтение входных регистров не удалось (проверьте адрес, проводку и протокол)."
+    }
+  },
+  "selector": {
+    "connection_type": {
+      "options": {
+        "tcp": "Modbus TCP",
+        "rtu": "Modbus RTU"
+      }
+    },
+    "parity": {
+      "options": {
+        "N": "Нет",
+        "E": "Чётная",
+        "O": "Нечётная"
+      }
+    },
+    "stopbits": {
+      "options": {
+        "1": "1",
+        "2": "2"
+      }
+    }
+  },
+  "entity": {
+    "sensor": {
+      "voltage": {
+        "name": "Напряжение",
+        "unit_of_measurement": "В"
+      },
+      "current": {
+        "name": "Ток",
+        "unit_of_measurement": "А"
+      },
+      "active_power": {
+        "name": "Активная мощность",
+        "unit_of_measurement": "Вт"
+      },
+      "reactive_power": {
+        "name": "Реактивная мощность",
+        "unit_of_measurement": "ВАр"
+      },
+      "apparent_power": {
+        "name": "Полная мощность",
+        "unit_of_measurement": "ВА"
+      },
+      "power_factor": {
+        "name": "Коэффициент мощности"
+      },
+      "phase_angle": {
+        "name": "Угол фазового сдвига",
+        "unit_of_measurement": "°"
+      },
+      "frequency": {
+        "name": "Частота",
+        "unit_of_measurement": "Гц"
+      },
+      "load_nature": {
+        "name": "Характер нагрузки"
+      },
+      "active_power_demand": {
+        "name": "Потребляемая активная мощность (спрос)",
+        "unit_of_measurement": "Вт"
+      },
+      "reactive_power_demand": {
+        "name": "Реактивная мощность (спрос)",
+        "unit_of_measurement": "ВАр"
+      },
+      "apparent_power_demand": {
+        "name": "Полная мощность (спрос)",
+        "unit_of_measurement": "ВА"
+      },
+      "current_demand": {
+        "name": "Ток (спрос)",
+        "unit_of_measurement": "А"
+      },
+      "import_active_power_demand": {
+        "name": "Спрос активной мощности (импорт)",
+        "unit_of_measurement": "Вт"
+      },
+      "export_active_power_demand": {
+        "name": "Спрос активной мощности (экспорт)",
+        "unit_of_measurement": "Вт"
+      },
+      "max_active_power_demand": {
+        "name": "Максимальный спрос активной мощности",
+        "unit_of_measurement": "Вт"
+      },
+      "max_reactive_power_demand": {
+        "name": "Максимальный спрос реактивной мощности",
+        "unit_of_measurement": "ВАр"
+      },
+      "max_apparent_power_demand": {
+        "name": "Максимальный спрос полной мощности",
+        "unit_of_measurement": "ВА"
+      },
+      "max_current_demand": {
+        "name": "Максимальный спрос тока",
+        "unit_of_measurement": "А"
+      },
+      "max_import_active_power_demand": {
+        "name": "Макс. спрос активной мощности (импорт)",
+        "unit_of_measurement": "Вт"
+      },
+      "max_export_active_power_demand": {
+        "name": "Макс. спрос активной мощности (экспорт)",
+        "unit_of_measurement": "Вт"
+      },
+      "total_import_active_energy": {
+        "name": "Суммарная импортируемая активная энергия",
+        "unit_of_measurement": "кВт·ч"
+      },
+      "total_export_active_energy": {
+        "name": "Суммарная экспортируемая активная энергия",
+        "unit_of_measurement": "кВт·ч"
+      },
+      "total_active_energy": {
+        "name": "Суммарная активная энергия",
+        "unit_of_measurement": "кВт·ч"
+      },
+      "total_import_reactive_energy": {
+        "name": "Суммарная импортируемая реактивная энергия",
+        "unit_of_measurement": "квар·ч"
+      },
+      "total_export_reactive_energy": {
+        "name": "Суммарная экспортируемая реактивная энергия",
+        "unit_of_measurement": "квар·ч"
+      },
+      "total_reactive_energy": {
+        "name": "Суммарная реактивная энергия",
+        "unit_of_measurement": "квар·ч"
+      }
+    }
+  },
+  "title": "Счётчик TAC2100"
+}
