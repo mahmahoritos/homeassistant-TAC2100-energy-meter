@@ -1,6 +1,6 @@
 # TAC2100 Energy Meter (Home Assistant)
 
-**Status: alpha** (`0.1.0-alpha.1`) — for testing; breaking changes are possible before a stable release.
+**Status: alpha** (`0.1.0-alpha.2`) — for testing; breaking changes are possible before a stable release.
 
 Custom integration for the **Wenzhou Taiye TAC2100** series power meter using **Modbus** input registers (function `0x04`, IEEE-754 floats) per the manufacturer protocol.
 

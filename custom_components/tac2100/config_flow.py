@@ -41,7 +41,6 @@ from .const import (
     DEFAULT_STOPBITS,
     DOMAIN,
 )
-from .modbus_client import create_modbus_client, read_input_registers_block
 
 _LOGGER = logging.getLogger(__name__)
 
@@ -50,8 +49,8 @@ STEP_USER_SCHEMA = vol.Schema(
         vol.Required(CONF_CONNECTION_TYPE): SelectSelector(
             SelectSelectorConfig(
                 options=[
-                    SelectOptionDict(value=CONNECTION_TCP),
-                    SelectOptionDict(value=CONNECTION_RTU),
+                    SelectOptionDict(value=CONNECTION_TCP, label="Modbus TCP"),
+                    SelectOptionDict(value=CONNECTION_RTU, label="Modbus RTU"),
                 ],
                 translation_key="connection_type",
             )
@@ -79,9 +78,9 @@ def _rtu_schema() -> vol.Schema:
             vol.Required(CONF_PARITY, default=DEFAULT_PARITY): SelectSelector(
                 SelectSelectorConfig(
                     options=[
-                        SelectOptionDict(value="N"),
-                        SelectOptionDict(value="E"),
-                        SelectOptionDict(value="O"),
+                        SelectOptionDict(value="N", label="None"),
+                        SelectOptionDict(value="E", label="Even"),
+                        SelectOptionDict(value="O", label="Odd"),
                     ],
                     translation_key="parity",
                 )
@@ -89,8 +88,8 @@ def _rtu_schema() -> vol.Schema:
             vol.Required(CONF_STOPBITS, default=DEFAULT_STOPBITS): SelectSelector(
                 SelectSelectorConfig(
                     options=[
-                        SelectOptionDict(value=1),
-                        SelectOptionDict(value=2),
+                        SelectOptionDict(value=1, label="1"),
+                        SelectOptionDict(value=2, label="2"),
                     ],
                     translation_key="stopbits",
                 )
@@ -113,6 +112,9 @@ STEP_DEVICE_SCHEMA = vol.Schema(
 
 async def _try_communication(data: dict[str, Any]) -> None:
     """Verify Modbus connectivity and a readable measurement block."""
+    # Lazy import: keeps config_flow import light (avoids extra work on event loop import path).
+    from .modbus_client import create_modbus_client, read_input_registers_block
+
     conn = data[CONF_CONNECTION_TYPE]
     client = create_modbus_client(
         conn,
